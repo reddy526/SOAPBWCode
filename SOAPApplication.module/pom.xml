@@ -10,14 +10,14 @@
   </parent>
   <artifactId>SOAPApplication.module</artifactId>
   <packaging>bwmodule</packaging>
-  <dependencies>
+  <!--<dependencies>
     <dependency>
       <groupId>com.tibco.plugins</groupId>
       <artifactId>com.tibco.bw.palette.shared</artifactId>
       <version>6.1.100</version>
       <scope>provided</scope>  
     </dependency>
-  </dependencies>
+  </dependencies> -->
   <build>
     <sourceDirectory>src</sourceDirectory>
     <outputDirectory>target/classes</outputDirectory>
