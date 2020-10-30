@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:PhoneValidationRequest_1.0.0="http://www.tmw.com/Schemas/PhoneValidationRequest/1.0.0" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmlns:wsdl_1603967929975="http://www.tmw.com/PhoneValidation/wsdl/1603967929975" xmi:id="_pIs9YBnREeuxXf9u9hK7lg" targetNamespace="http://tns.tibco.com/bw/composite/SOAPApplication.module" name="SOAPApplication.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_tEH_MBnTEeuxXf9u9hK7lg" name="Process" promote="ComponentProcess/Process">
+    <sca:interface.wsdl xmi:id="_tEaTEBnTEeuxXf9u9hK7lg" interface="http://www.tmw.com/PhoneValidation/wsdl/1603967929975#wsdl.interface(Process)" scaext:wsdlLocation="../Resources/PhoneValidation.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_hmtEMBnUEeuxXf9u9hK7lg" name="SOAPServiceBinding" targetNamespace="http://www.tmw.com/Schemas/Common/PhoneValidationRequest/1.0.0/SOAPServiceBinding" portTypeQName="wsdl_1603967929975:Process" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/SOAPApplication.module/Resources/PhoneValidation.wsdl">
+      <bindingType xmi:id="_8gGAIBniEeugxvogjerBxA"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_mSLU0BnUEeuxXf9u9hK7lg" endpointURI="/SOAPServiceBinding/process/" httpConnector="soapapplication.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_8gGnMBniEeugxvogjerBxA" operationName="validatePhone" action="validatePhone" actionNeeded="true">
+        <bindingType xmi:id="_8gGnMRniEeugxvogjerBxA"/>
+        <messageConfiguration xmi:id="_8gGnMhniEeugxvogjerBxA" messageQName="wsdl_1603967929975:validatePhoneRequest" wsdlLocation="platform:/resource/SOAPApplication.module/Resources/PhoneValidation.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_8gGnMxniEeugxvogjerBxA" partName="ValidationRequest" partElementName="PhoneValidationRequest_1.0.0:PhoneValidationRequest"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_8gGnNBniEeugxvogjerBxA" messageQName="wsdl_1603967929975:validatePhoneResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/SOAPApplication.module/Resources/PhoneValidation.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_8gGnNRniEeugxvogjerBxA" partName="ValidationResponse" partElementName="PhoneValidationRequest_1.0.0:PhoneValidationResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_8gHOQBniEeugxvogjerBxA">
+          <inputMapping xmi:id="_8gHOQRniEeugxvogjerBxA"/>
+          <outputMapping xmi:id="_8gHOQhniEeugxvogjerBxA" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_hm_YEhnUEeuxXf9u9hK7lg" bindingName="SOAPServiceBinding"/>
+  </sca:service>
+  <sca:property xmi:id="_pUFG8BnREeuxXf9u9hK7lg" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pUJ_cBnREeuxXf9u9hK7lg" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pUMbsBnREeuxXf9u9hK7lg" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pUOQ4BnREeuxXf9u9hK7lg" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pURUMBnREeuxXf9u9hK7lg" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pUTwcBnREeuxXf9u9hK7lg" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pUWMsBnREeuxXf9u9hK7lg" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pUZQABnREeuxXf9u9hK7lg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pUbsQBnREeuxXf9u9hK7lg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_pN4YUBnREeuxXf9u9hK7lg" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_pN4YURnREeuxXf9u9hK7lg" processName="soapapplication.module.Process"/>
+    <sca:service xmi:id="_tDj-gBnTEeuxXf9u9hK7lg" name="Process">
+      <sca:interface.wsdl xmi:id="_tDtIcBnTEeuxXf9u9hK7lg" interface="http://www.tmw.com/PhoneValidation/wsdl/1603967929975#wsdl.interface(Process)" scaext:wsdlLocation="../Resources/PhoneValidation.wsdl"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

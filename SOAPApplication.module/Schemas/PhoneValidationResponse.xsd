@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns:alp="http://www.tmw.com/Schemas/Common/PhoneValidationRequest/1.0.0"
+	 targetNamespace="http://www.tmw.com/Schemas/PhoneValidationRequest/1.0.0"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="PhoneValidationResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Header" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Domain" type="xs:string" minOccurs="0"/>
+							<xs:element name="Source" type="xs:string" minOccurs="0"/>
+							<xs:element name="Target" type="xs:string" minOccurs="0"/>
+							<xs:element name="CompanyID" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:enumeration value="TMW"/>
+										<xs:enumeration value="KNG"/>
+										<xs:enumeration value="MSP"/>
+										<xs:enumeration value="TMWSUP"/>
+										<xs:enumeration value="JAB"/>
+										<xs:enumeration value="MCY"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="GlobalTransactionID" type="xs:string" minOccurs="0"/>
+							<xs:element name="BusinessID" type="xs:string" minOccurs="0"/>
+							<xs:element name="ProjectName" type="xs:string" minOccurs="0"/>
+							</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Body" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PhoneNumber" type="xs:string" minOccurs="0"/>
+							<xs:element name="StatusMessage" type="xs:string" minOccurs="0"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:extns="http://www.tmw.com/Schemas/PhoneValidationRequest/1.0.0" xmlns:tns="http://www.tmw.com/PhoneValidation/wsdl/1603967929975" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PhoneValidation" targetNamespace="http://www.tmw.com/PhoneValidation/wsdl/1603967929975">
+  <wsdl:import location="../Schemas/PhoneValidationRequest.xsd" namespace="http://www.tmw.com/Schemas/PhoneValidationRequest/1.0.0"/>
+    <wsdl:import location="../Schemas/PhoneValidationResponse.xsd" namespace="http://www.tmw.com/Schemas/PhoneValidationRequest/1.0.0"/>
+    <wsdl:types>
+    <xsd:schema elementFormDefault="unqualified" targetNamespace="http://www.tmw.com/PhoneValidationProcess/wsdl/1603967929975">
+      <xsd:element name="validatePhoneRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+                    </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="validatePhoneResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="validatePhoneRequest">
+    <wsdl:part element="extns:PhoneValidationRequest" name="ValidationRequest"/>
+  </wsdl:message>
+  <wsdl:message name="validatePhoneResponse">
+    <wsdl:part element="extns:PhoneValidationResponse" name="ValidationResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="Process">
+    <wsdl:operation name="validatePhone">
+      <wsdl:input message="tns:validatePhoneRequest" name="operationInput"/>
+      <wsdl:output message="tns:validatePhoneResponse" name="operationOutput"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
