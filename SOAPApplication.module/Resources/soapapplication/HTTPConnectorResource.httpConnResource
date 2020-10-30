@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:httpconnector="http://xsd.tns.tibco.com/bw/models/sharedresource/httpconnector" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_c0NlkBnUEeuxXf9u9hK7lg" name="soapapplication.HTTPConnectorResource" type="httpconnector:HttpConnectorConfiguration">
-  <jndi:configuration xsi:type="httpconnector:HttpConnectorConfiguration" xmi:id="_c0NlkRnUEeuxXf9u9hK7lg" port="7096" acceptQueueSize="-1" newAccessLogs="true">
+  <jndi:configuration xsi:type="httpconnector:HttpConnectorConfiguration" xmi:id="_c0NlkRnUEeuxXf9u9hK7lg" port="7091" acceptQueueSize="-1" newAccessLogs="true">
     <substitutionBindings xmi:id="_xO_3oBnoEeujRL9ctZxKhg" template="host" propName="BW.HOST.NAME"/>
   </jndi:configuration>
 </jndi:namedResource>
