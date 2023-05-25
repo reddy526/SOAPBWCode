@@ -11,29 +11,29 @@
   <artifactId>SOAPApplication</artifactId>
   <packaging>bwear</packaging>
   <properties>
-    <appSpace>demoappspace</appSpace>
-    <keystorePath></keystorePath>
-    <profile>default.substvar</profile>
-    <backup>false</backup>
-    <truststorePath></truststorePath>
-    <domainDesc></domainDesc>
-    <agentPort>8079</agentPort>
-    <truststorePassword></truststorePassword>
-    <agentAuth></agentAuth>
-    <agentHost>192.168.0.47</agentHost>
-    <httpPort>8060</httpPort>
-    <appNode>demoappnode</appNode>
-    <osgiPort>9595</osgiPort>
-    <appSpaceDesc></appSpaceDesc>
-    <redeploy>true</redeploy>
-    <keystorePassword></keystorePassword>
-    <backupLocation></backupLocation>
-    <agentPassword></agentPassword>
-    <appNodeDesc></appNodeDesc>
-    <agentSSL>false</agentSSL>
-    <agentUsername></agentUsername>
-    <domain>demodomain</domain>
-    <deployToAdmin>true</deployToAdmin>
+        <appSpace>PublishASN_tmp</appSpace>
+        <keystorePath></keystorePath>
+        <profile>test.substvar</profile>
+        <backup>false</backup>
+        <truststorePath></truststorePath>
+        <domainDesc></domainDesc>
+        <agentPort>8079</agentPort>
+        <truststorePassword></truststorePassword>
+        <agentAuth></agentAuth>
+        <agentHost>esbbwtstapp601</agentHost>
+        <httpPort>8954</httpPort>
+        <appNode>PublishASN_tmp_N601</appNode>
+        <osgiPort>8954</osgiPort>
+        <appSpaceDesc></appSpaceDesc>
+        <redeploy>true</redeploy>
+        <keystorePassword></keystorePassword>
+        <backupLocation></backupLocation>
+        <agentPassword></agentPassword>
+        <appNodeDesc></appNodeDesc>
+        <agentSSL>false</agentSSL>
+        <agentUsername></agentUsername>
+        <domain>TEST_V1</domain>
+        <deployToAdmin>true</deployToAdmin>
   </properties>
   <build>
     <plugins>
